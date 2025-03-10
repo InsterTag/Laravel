@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('tittle');
-            $table->text('biografia');
+            $table->text('biography');
             $table->string('website');
 
             $table->unsignedBigInteger('user_id')->unique();
