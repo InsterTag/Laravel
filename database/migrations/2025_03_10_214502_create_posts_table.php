@@ -18,15 +18,15 @@ return new class extends Migration
             $table->text('body');
             
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('categoria_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
 
             $table->foreign('user_id')
             ->references('id')
             ->on('users')->onDelete('set null');
 
-            $table->foreign('categoria_id')
+            $table->foreign('category_id')
             ->references('id')
-            ->on('categorias')->onDelete('set null');
+            ->on('categories')->onDelete('set null');
             $table->timestamps();
         });
     }
